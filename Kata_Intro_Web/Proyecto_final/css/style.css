@@ -84,6 +84,13 @@ header {
     border-radius: 10px;
 }
 
+.login-title img{
+    width: 120%;
+    position: static;
+    margin-top: 0%;
+    margin-left: -6%;
+}
+
 .signup a{
     background-color: #f26d21;
     border: 3px solid #f26d21;
@@ -182,12 +189,12 @@ main{
 }
 
 .login-subtitle{
-    margin-top: 5%;
+    margin-top: -50%;
     color: rgb(80, 80, 80);
 }
 
 .redirect {
-    margin-top: 40%;
+    margin-top: 45%;
     color: rgb(80, 80, 80);
 }
 
@@ -224,7 +231,7 @@ label a{
 
 input[type="checkbox" i]{
     width: 5%;
-    margin: 10px 0 0 0;
+    margin: 20px 0 0 0;
     margin-left: -50%;
 }
 
@@ -232,7 +239,8 @@ input[type="checkbox" i]{
     border-bottom: 1px transparent;
     border-left: 1px transparent;
     border-right: 1px transparent;
-    margin: 30px 50px 15px;
+    border-top: 1px solid rgba(170, 170, 170, 0.301);
+    margin: 45px 65px 15px;
 }
 
 .form-info label{
@@ -276,8 +284,8 @@ form{
 
 .links ul{
     padding: 0;
-    width: 60%;
-    margin: 15px 10% 30px;
+    width: 50%;
+    margin: 15px 10% 30px 19%;
     display: flex;
     flex-direction: row;
 }
@@ -305,9 +313,9 @@ form{
 
 p{
     color: rgb(99, 99, 99);
-    margin: 15px 0px 30px 10%;
+    margin: 15px 0px 0px 15%;
     text-align: justify;
-    width: 80%;
+    width: 70%;
 }
 
 p a{
@@ -465,4 +473,18 @@ a{
     background-color: #2073d9;
     padding: 18px;
     border-radius: 30px;
+}
+
+form img{
+    width: 15px;
+    position: absolute;
+    right: 39.4%;
+    padding: 7px;
+    top: 53%;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+}
+
+form img:hover{
+    background-color: rgba(170, 170, 170, 0.13);
 }
