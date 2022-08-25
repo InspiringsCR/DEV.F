@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h2>Selecciona la moneda</h2>
+        <select name="select" id="select" class="select">
+            <option selected value="">Selecciona</option>
+            <option value="dolar">🇺🇸</option>
+            <option value="mx">🇲🇽</option>
+            <option value="quetzal">🇬🇹</option>
+            <option value="soles">🇵🇪</option>
+        </select>
+    </div>
+
+    <div class="container">
+        <div class="render" id="render">
+            <span id="span" class="span">Seleccionaste la moneda <strong>dolar</strong></span>
+        </div>
+    
+        <form action="" id="form" class="form">
+            <input placeholder="Ingresa el monto" type="text" name="monto" id="monto">
+            <button type="submit">CALCULAR</button>
+        </form>
+    
+        <div class="resultados" id="resultado">
+    
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
