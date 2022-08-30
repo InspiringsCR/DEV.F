@@ -1,0 +1,34 @@
+.cuadrito {
+    position: fixed;
+    top: 35%;
+    right: 35%;
+    border-radius: 10%;
+    box-shadow: 0 0 25px #ddd;
+    background-color: #ffffffcc;
+    padding: 5%;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    text-decoration: none;
+}
+  
+.navbar a {
+    background-color: #CAD43B;
+}
+
+.navbar a:hover {
+    background-color: #4367ad;
+}
