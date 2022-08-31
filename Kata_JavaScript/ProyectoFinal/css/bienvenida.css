@@ -1,7 +1,7 @@
 .cuadrito {
     position: fixed;
     top: 35%;
-    right: 40%;
+    right: 37.5%;
     border-radius: 10%;
     box-shadow: 0 0 25px #ddd;
     background-color: #ffffffcc;
@@ -27,6 +27,7 @@
 
 .navbar a {
     background-color: #CAD43B;
+    border-radius: 5px;
 }
 
 .navbar a:hover {

@@ -25,11 +25,12 @@
         <form class="cuadrito">
             <h3>Saldo actual: <span id="saldo">0</span></h3>
             <div>
-                <b>Depósito</b>
+                <b>Ingreso</b>
                 <input type="checkbox" value="1" onchange="javascript:showContent('deposito',this)" />
                 <div id="deposito" class="hide">
-                    Ingresa el deposito a realizar <input type="text" name="valor1">
-                    <input type="button" value="Enviar" onclick="deposito()">
+                    Ingresa el deposito a realizar 
+                    <input type="text" name="valor1">
+                    <input type="button" value="Enviar" onclick="deposito()" class="button">
                 </div>
             </div>
     
@@ -38,11 +39,21 @@
                 <input type="checkbox" value="1" onchange="javascript:showContent('retiro',this)" />
                 <div id="error"></div>
                 <div id="retiro" class="hide">
-                    Ingresa el retiro a realizar <input type="text" name="valor2">
-                    <input type="button" value="Enviar" onclick="retiro()">
+                    Ingresa el retiro a realizar
+                    <input type="text" name="valor2">
+                    <input type="button" value="Enviar" onclick="retiro()" class="button">
                 </div>
             </div>
         </form>
+
+        <div class="cuadrito1">
+            <div class="navbar">
+                <span>¿Deseas salir de la sesión?</span>
+                <div>
+                    <a href="index.html">Cerrar sesión</a>
+                </div>
+            </div>
+        </div>
 
         <main>
 
