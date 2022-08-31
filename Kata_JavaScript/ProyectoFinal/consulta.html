@@ -21,19 +21,28 @@
             <img src="img/cajero.png" alt="cajero">
         </div>
 
-        <div class="cuadrito">
-            <div class="navbar">
-                <span id="totalSaldo">Su saldo actual es de 100$</span>
-                <h2 id="totalIngreso"></h2>
-                <h2 id="totalRetiro"></h2>
-                <span>¿Deseas realizar algo más?</span>
-                <div>
-                    <a href="index.html">Salir de la sesion</a>
-                    <a href="ingresar.html">Ingresar dinero</a>
-                    <a href="retirar.html">Retirar dinero</a>
+        
+        <form class="cuadrito">
+            <h3>Saldo actual: <span id="saldo">0</span></h3>
+            <div>
+                <b>Depósito</b>
+                <input type="checkbox" value="1" onchange="javascript:showContent('deposito',this)" />
+                <div id="deposito" class="hide">
+                    Ingresa el deposito a realizar <input type="text" name="valor1">
+                    <input type="button" value="Enviar" onclick="deposito()">
                 </div>
             </div>
-        </div>
+    
+            <div>
+                <b>Retiro</b>
+                <input type="checkbox" value="1" onchange="javascript:showContent('retiro',this)" />
+                <div id="error"></div>
+                <div id="retiro" class="hide">
+                    Ingresa el retiro a realizar <input type="text" name="valor2">
+                    <input type="button" value="Enviar" onclick="retiro()">
+                </div>
+            </div>
+        </form>
 
         <main>
 

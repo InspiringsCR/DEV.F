@@ -6,13 +6,8 @@
     box-shadow: 0 0 25px #ddd;
     background-color: #ffffffcc;
     padding: 5%;
-}
-
-.navbar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 30%;
+    height: 30%;
 }
 
 .navbar a {
@@ -31,4 +26,21 @@
 
 .navbar a:hover {
     background-color: #4367ad;
+}
+
+.hide {
+    display: none;
+}
+
+form>div {
+    margin-top:20px;
+}
+
+input[type=text] {
+    text-align:right;
+}
+
+#error {
+    display: none;
+    color:Red;
 }
