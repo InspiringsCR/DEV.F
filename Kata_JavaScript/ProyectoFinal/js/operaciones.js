@@ -1,4 +1,4 @@
-var saldo = 0;
+var saldo = 1000;
  
 	function showContent(id, e) {
 		document.getElementById("error").style.display='none';
