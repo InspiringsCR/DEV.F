@@ -1,36 +1,42 @@
-const pokedex = document.getElementById('pokedex');
+const charactersList = document.getElementById('charactersList');
+const searchBar = document.getElementById('searchBar');
+let hpCharacters = [];
 
-const fetchPokemon = () => {
-    const promises = [];
-    for (let i = 1; i <= 150; i++) {
-        const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
-        promises.push(fetch(url).then((res) => res.json()));
-    }
-    Promise.all(promises).then((results) => {
-        const pokemon = results.map((result) => ({
-            name: result.name,
-            image: result.sprites['front_default'],
-            type: result.types.map((type) => type.type.name).join(', '),
-            id: result.id
-        }));
-        displayPokemon(pokemon);
+searchBar.addEventListener('keyup', (e) => {
+    const searchString = e.target.value.toLowerCase();
+
+    const filteredCharacters = hpCharacters.filter((character) => {
+        return (
+            character.name.toLowerCase().includes(searchString) ||
+            character.house.toLowerCase().includes(searchString)
+        );
     });
+    displayCharacters(filteredCharacters);
+});
+
+const loadCharacters = async () => {
+    try {
+        const res = await fetch('https://hp-api.herokuapp.com/api/characters');
+        hpCharacters = await res.json();
+        displayCharacters(hpCharacters);
+    } catch (err) {
+        console.error(err);
+    }
 };
 
-const displayPokemon = (pokemon) => {
-    console.log(pokemon);
-    const pokemonHTMLString = pokemon
-        .map(
-            (pokeman) => `
-        <li class="card">
-            <img class="card-image" src="${pokeman.image}"/>
-            <h2 class="card-title">${pokeman.id}. ${pokeman.name}</h2>
-            <p class="card-subtitle">Type: ${pokeman.type}</p>
-        </li>
-    `
-        )
+const displayCharacters = (characters) => {
+    const htmlString = characters
+        .map((character) => {
+            return `
+            <li class="character">
+                <h2>${character.name}</h2>
+                <p>House: ${character.house}</p>
+                <img src="${character.image}"></img>
+            </li>
+        `;
+        })
         .join('');
-    pokedex.innerHTML = pokemonHTMLString;
+    charactersList.innerHTML = htmlString;
 };
 
-fetchPokemon();
+loadCharacters();

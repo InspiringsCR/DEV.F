@@ -1,81 +1,74 @@
 body {
-    background-color: #007fff;
-    color: white;
-    margin: 0;
-    font-family: rubik;
+    font-family: sans-serif;
+    background-color: #111d4a;
 }
 
+* {
+    box-sizing: border-box;
+}
+h1 {
+    color: #eee;
+    margin-bottom: 30px;
+}
 .container {
     padding: 40px;
     margin: 0 auto;
-}
-
-.container .img img{
-    position: absolute;
-    width: 10%;
-}
-
-.container .img2 img{
-    position: absolute;
-    width: 5%;
-    right: 2%;
-}
-
-h1 {
-    text-transform: uppercase;
+    max-width: 1000px;
     text-align: center;
-    font-size: 54px;
 }
 
-#pokedex {
+#charactersList {
+    padding-inline-start: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 20px;
-    padding-inline-start: 0;
 }
 
-.card {
-    list-style: none;
-    padding: 40px;
-    background-color: #f4f4f4;
-    color: #222;
-    text-align: center;
-    border-radius: 7%;
-    box-shadow: 3px 3px 0px 5px #00000080;
+.character {
+    list-style-type: none;
+    background-color: #eaeaea;
+    border-radius: 3px;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        'name image'
+        'house image';
+    text-align: left;
 }
 
-.card:hover {
-    animation: bounce 0.5s linear;
-}
-
-.card-title {
-    text-transform: capitalize;
+.character > h2 {
+    grid-area: name;
     margin-bottom: 0px;
-    font-size: 32px;
-    font-weight: normal;
-}
-.card-subtitle {
-    margin-top: 5px;
-    color: #666;
-    font-weight: lighter;
 }
 
-.card-image {
-    height: 180px;
+.character > p {
+    grid-area: house;
+    margin: 0;
+    margin-top: -18px;
 }
 
-@keyframes bounce {
-    20% {
-        transform: translateY(-6px);
-    }
-    40% {
-        transform: translateY(0px);
-    }
+.character > img {
+    max-height: 100px;
+    grid-area: image;
+}
 
-    80% {
-        transform: translateY(-2px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+#searchBar {
+    width: 100%;
+    height: 32px;
+    border-radius: 3px;
+    border: 1px solid #eaeaea;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+#searchWrapper {
+    position: relative;
+}
+
+#searchWrapper::after {
+    content: '🔍';
+    position: absolute;
+    top: 7px;
+    right: 15px;
 }

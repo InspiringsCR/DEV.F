@@ -4,20 +4,21 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Pokedex</title>
+        <title>Document</title>
         <link rel="stylesheet" href="styles.css" />
-        <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet"/>
     </head>
     <body>
         <div class="container">
-            <div class="img">
-                <img src="img/logo.png" alt="logo">
+            <h1>&#x2728;Harry Potter Characters &#x2728;</h1>
+            <div id="searchWrapper">
+                <input
+                    type="text"
+                    name="searchBar"
+                    id="searchBar"
+                    placeholder="search for a character"
+                />
             </div>
-            <div class="img2">
-                <img src="img/puntero.png" alt="puntero">
-            </div>
-            <h1>Pokedex</h1>
-            <ul id="pokedex"></ul>
+            <ul id="charactersList"></ul>
         </div>
         <script src="index.js"></script>
     </body>
