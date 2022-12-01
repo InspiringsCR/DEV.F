@@ -1,17 +1,12 @@
 import Button from "./Button"
 import Tareas from "./Tareas"
 
-const Header = ({titulo}) => {
+const Header = ({titulo, onAdd, mostrarForm}) => {
   
-    const saludo = () => {
-        console.log('click')
-    }
-
     return (
         <header className="header">
             <h1>{titulo}</h1>
-            <Button texto='Agregar' color='green' param={saludo} />
-            <Button texto='Borrar' color='red' param={saludo} />
+            <Button texto={mostrarForm ? 'Ocultar' : 'Mostrar'} color={mostrarForm ? 'red' : 'green'} onClick={onAdd} />
         </header>
     )
 }
